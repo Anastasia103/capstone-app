@@ -1,0 +1,54 @@
+Routes
+
+General
+
+1. Given at least one genre and Money-Range show a list of games ranked by web reviews (MONEY-RANGE DONE)
+GET /getGamesbyWebReview 
+Body includes: highestPrice, lowestPrice
+2. Show a list of games ranked by user reviews ( DONE)
+GET /getGamesbyUserReview
+3 . Show all user reviews for a given game (DONE)
+GET /seeReviews/:gameid
+
+Auth
+
+For Both Users and Admin
+
+4 .Register (DONE)
+POST /register 
+Body includes: name, username, password AND ONLY IF ADMIN “admin”: “true”
+5. Login(DONE)
+POST /login
+Body includes: username, password
+
+
+Basic User
+
+6. Post/Create a Review on a Game (DONE)
+POST /postReview/:gameid
+Body includes: rating, description
+7. See a list of their reviews (DONE)
+GET /userReviews
+8. Delete their own review (DONE)
+DELETE /deleteMyReviews/:reviewid
+9. Update their own review (DONE)
+PUT /updateMyReview/:reviewid
+Body includes rating, description
+10. Add a Game to their own Games Table (DONE)
+POST /addtoWishlist/:gameid
+11. Update game on games table to “played” (DONE)
+PUT /updatedWishlist/:gameid
+12. Delete Game from Games Table (DONE)
+DELETE /deleteWishlist/:gameid
+13. See their Wishlist (DONE)
+GET /Wishlist
+
+Admin 
+14. Add a Game (DONE)
+POST /addGame
+Body includes name, price, web_review 
+15. Update a Game (DONE)
+PUT /updateGame/:gameid
+Body includes name, price, web_review
+16. Delete a User Review (DONE)
+DELETE /adminDeleteReview/:reviewid
