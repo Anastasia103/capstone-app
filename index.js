@@ -24,8 +24,8 @@ app.use(userRoute)
 app.use(generalRoute)
 
 
-app.use("/hello", function(req, res){
-    res.send("Hello Internet and Dad Charles and Jackie " + something)
+app.use("/", function(req, res){
+    res.send("Hello Internet")
 })
 
 app.use("/goodbye", function(req, res){
