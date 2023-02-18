@@ -11,10 +11,10 @@ app.listen(port, function(){
 
 app.use(express.json())
 
-let authRoute = require("./routes/authRoutes")
-let adminRoute = require("./routes/adminRoutes")
-let userRoute = require("./routes/userRoutes.js")
-let generalRoute = require("./routes/generalRoutes")
+let authRoute = require("./src/routes/authRoutes")
+let adminRoute = require("./src/routes/adminRoutes")
+let userRoute = require("./src/routes/userRoutes.js")
+let generalRoute = require("./src/routes/generalRoutes")
 
 let something = process.env.MYSQL_HOST
 
